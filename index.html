@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- Viewport & Display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#EF4444" />
+    <meta name="color-scheme" content="light dark" />
+    
+    <!-- SEO -->
+    <meta name="description" content="Rakshak - Your Emergency Help Companion for India. One-tap SOS alerts, live location tracking, fake call feature, and trusted contacts management." />
+    <meta name="keywords" content="emergency app, safety app, SOS, India safety, women safety, emergency contacts, fake call, panic button, emergency alert" />
+    <meta name="author" content="Rakshak Team" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rakshak - Emergency Help App for India" />
+    <meta property="og:description" content="Your personal safety companion with one-tap SOS alerts, live location tracking, and emergency features." />
+    <meta property="og:image" content="/icon-512.png" />
+    <meta property="og:url" content="https://rakshak.app" />
+    <meta property="og:site_name" content="Rakshak" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rakshak - Emergency Help App" />
+    <meta name="twitter:description" content="Your personal safety companion for India" />
+    <meta name="twitter:image" content="/icon-512.png" />
+    
+    <!-- PWA - iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Rakshak" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link rel="apple-touch-startup-image" href="/icon-512.png" />
+    
+    <!-- PWA - Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Rakshak" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon-192.png" />
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://nominatim.openstreetmap.org" />
+    
+    <title>🛡️ Rakshak - Emergency Help App for India</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('ServiceWorker registered:', registration.scope);
+            })
+            .catch((error) => {
+              console.log('ServiceWorker registration failed:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
